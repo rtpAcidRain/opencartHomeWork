@@ -635,15 +635,7 @@ i:before {
   line-height: 46px;
 }
 
-.top_right li.h_price .bootstrap-select .dropdown-toggle:after {
-  content: "\f107";
-  font: normal normal normal 14px/1 FontAwesome;
-  border: none;
-  color: #000;
-  right: 20px;
-  position: relative;
-  top: 4px;
-}
+
 
 .top_right li.h_price .bootstrap-select .dropdown-menu {
   padding: 0px;
