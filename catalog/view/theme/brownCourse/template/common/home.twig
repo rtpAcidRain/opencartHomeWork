@@ -1,55 +1,18 @@
 {{ header }}
-<body>
+<div id="common-home" class="container">
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
 
 
-	<!--================Slider Area =================-->
-	<section class="main_slider_area">
-		<div class="container">
-			<div id="main_slider" class="rev_slider" data-version="5.3.1.6">
-				<ul>
-					<li
-						data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="catalog/view/theme/brownCourse/img/home-slider/slider-1.jpg" data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-						<!-- MAIN IMAGE -->
-						<img
-						src="catalog/view/theme/brownCourse/img/home-slider/slider-1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
-
-						<!-- LAYER NR. 1 -->
-						<div class="slider_text_box">
-							<div class="tp-caption tp-resizeme first_text" data-x="['right','right','right','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['60','60','60','80','95']" data-fontsize="['54','54','54','40','40']" data-lineheight="['64','64','64','50','35']" data-width="['470','470','470','300','250']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','nowrap','nowrap']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textalign="['left','left','left','left','left','center']" style="z-index: 8;font-family: Montserrat,sans-serif;font-weight:700;color:#29263a;"><img src="catalog/view/theme/brownCourse/img/home-slider/2017-text.png" alt=""></div>
-
-							<div class="tp-caption tp-resizeme secand_text" data-x="['right','right','right','center','center',]" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['255','255','255','230','220']" data-fontsize="['48','48','48','48','36']" data-lineheight="['52','52','52','46']" data-width="['450','450','450','450','450']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-transform_idle="o:1;" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textalign="['left','left','left','left','left','center']">Best Summer
-								<br/>Collection
-							</div>
-
-							<div class="tp-caption tp-resizeme third_btn" data-x="['right','right','right','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['385','385','385','385','350']" data-width="['450','450','450','auto','auto']" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textalign="['left','left','left','left','left','center']">
-								<a class="checkout_btn" href="#">read more</a>
-							</div>
-						</div>
-					</li>
-					<li
-						data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="catalog/view/theme/brownCourse/img/home-slider/slider-2.jpg" data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-						<!-- MAIN IMAGE -->
-						<img src="catalog/view/theme/brownCourse/img/home-slider/slider-1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
-						<!-- LAYERS -->
-						<!-- LAYERS -->
-
-						<!-- LAYER NR. 1 -->
-							<div class="slider_text_box"> <div class="tp-caption tp-resizeme first_text" data-x="['right','right','right','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['60','60','60','80','95']" data-fontsize="['54','54','54','40','40']" data-lineheight="['64','64','64','50','35']" data-width="['470','470','470','300','250']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','nowrap','nowrap']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textalign="['left','left','left','left','left','center']" style="z-index: 8;font-family: Montserrat,sans-serif;font-weight:700;color:#29263a;"><img src="catalog/view/theme/brownCourse/img/home-slider/2017-text.png" alt=""></div>
-
-							<div class="tp-caption tp-resizeme secand_text" data-x="['right','right','right','center','center',]" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['255','255','255','230','220']" data-fontsize="['48','48','48','48','36']" data-lineheight="['52','52','52','46']" data-width="['450','450','450','450','450']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-transform_idle="o:1;" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textalign="['left','left','left','left','left','center']">Best Summer
-								<br/>Collection
-							</div>
-
-							<div class="tp-caption tp-resizeme third_btn" data-x="['right','right','right','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['385','385','385','385','350']" data-width="['450','450','450','auto','auto']" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textalign="['left','left','left','left','left','center']">
-								<a class="checkout_btn" href="#">read more</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<!--================End Slider Area =================-->
 
 	<!--================Feature Add Area =================-->
 	<section class="feature_add_area">
@@ -290,129 +253,9 @@
 		</div>
 	</section>
 	<!--================End Form Blog Area =================-->
-
-	<!--================Footer Area =================-->
-	<footer class="footer_area">
-		<div class="container">
-			<div class="footer_widgets">
-				<div class="row">
-					<div class="col-lg-4 col-md-4 col-6">
-						<aside class="f_widget f_about_widget">
-							<img src="catalog/view/theme/brownCourse/img/logo.png" alt="">
-							<p>Persuit is a Premium PSD Template. Best choice for your online store. Let purchase it to enjoy now</p>
-							<h6>Social:</h6>
-							<ul>
-								<li><a href="#"><i class="social_facebook"></i></a></li>
-								<li><a href="#"><i class="social_twitter"></i></a></li>
-								<li><a href="#"><i class="social_pinterest"></i></a></li>
-								<li><a href="#"><i class="social_instagram"></i></a></li>
-								<li><a href="#"><i class="social_youtube"></i></a></li>
-							</ul>
-						</aside>
-					</div>
-					<div class="col-lg-2 col-md-4 col-6">
-						<aside class="f_widget link_widget f_info_widget">
-							<div class="f_w_title">
-								<h3>Information</h3>
-							</div>
-							<ul>
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Delivery information</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="#">Help Center</a></li>
-								<li><a href="#">Returns & Refunds</a></li>
-							</ul>
-						</aside>
-					</div>
-					<div class="col-lg-2 col-md-4 col-6">
-						<aside class="f_widget link_widget f_service_widget">
-							<div class="f_w_title">
-								<h3>Customer Service</h3>
-							</div>
-							<ul>
-								<li><a href="#">My account</a></li>
-								<li><a href="#">Ordr History</a></li>
-								<li><a href="#">Wish List</a></li>
-								<li><a href="#">Newsletter</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>
-						</aside>
-					</div>
-					<div class="col-lg-2 col-md-4 col-6">
-						<aside class="f_widget link_widget f_extra_widget">
-							<div class="f_w_title">
-								<h3>Extras</h3>
-							</div>
-							<ul>
-								<li><a href="#">Brands</a></li>
-								<li><a href="#">Gift Vouchers</a></li>
-								<li><a href="#">Affiliates</a></li>
-								<li><a href="#">Specials</a></li>
-							</ul>
-						</aside>
-					</div>
-					<div class="col-lg-2 col-md-4 col-6">
-						<aside class="f_widget link_widget f_account_widget">
-							<div class="f_w_title">
-								<h3>My Account</h3>
-							</div>
-							<ul>
-								<li><a href="#">My account</a></li>
-								<li><a href="#">Ordr History</a></li>
-								<li><a href="#">Wish List</a></li>
-								<li><a href="#">Newsletter</a></li>
-							</ul>
-						</aside>
-					</div>
-				</div>
-			</div>
-			<div class="footer_copyright">
-				<h5>©
-					<script>
-						document.write(new Date().getFullYear());
-					</script>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;<script>
-						document.write(new Date().getFullYear());
-					</script>
-					All rights reserved | This template is made with
-					<i class="fa fa-heart-o" aria-hidden="true"></i>
-					by
-					<a href="https://colorlib.com" target="_blank">Colorlib</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</h5>
-			</div>
-		</div>
-	</footer>
-	<!--================End Footer Area =================-->
+{{ footer }}
 
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="catalog/view/theme/brownCourse/js/jquery-3.2.1.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="catalog/view/theme/brownCourse/js/popper.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/js/bootstrap.min.js"></script>
-	<!-- Rev slider js -->
-	<script src="catalog/view/theme/brownCourse/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<!-- Extra plugin css -->
-	<script src="catalog/view/theme/brownCourse/vendors/counterup/jquery.waypoints.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/counterup/jquery.counterup.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/bootstrap-selector/js/bootstrap-select.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/image-dropdown/jquery.dd.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/js/smoothscroll.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/isotope/isotope.pkgd.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/magnify-popup/jquery.magnific-popup.min.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/vertical-slider/js/jQuery.verticalCarousel.js"></script>
-	<script src="catalog/view/theme/brownCourse/vendors/jquery-ui/jquery-ui.js"></script>
 
-	<script src="catalog/view/theme/brownCourse/js/theme.js"></script>
-</body></html>
+
+
