@@ -1,23 +1,52 @@
 <div class="slideshow swiper-viewport">
   <div id="slideshow{{ module }}" class="swiper-container">
-    <div class="swiper-wrapper"> {% for banner in banners %}
-      <div class="swiper-slide text-center">{% if banner.link %}<a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" /></a>{% else %}<img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />{% endif %}</div>
+    <div class="swiper-wrapper"> 
+    {% for banner in banners %}
+      <div class="swiper-slide text-center">
+      {% if banner.link %}
+      <a href="{{ banner.link }}">
+     <h2 class="slide__title">{{ banner.title }}</h2>
+      <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />
+      </a>
+      {% else %}
+      <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />
+      {% endif %}
+      </div>
       {% endfor %} </div>
   </div>
-  <div class="swiper-pagination slideshow{{ module }}"></div>
-  <div class="swiper-pager">
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+ 
 </div>
+
+<style>
+  .swiper-slide {
+    position: relative;
+  }
+  .slide__title{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+       font-family: "Poppins", sans-serif;
+    color: #000;
+        text-align: left;
+    line-height: 52px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-size: 48px;
+    white-space: normal;
+    min-height: 0px;
+    min-width: 450px;
+    max-height: none;
+    max-width: 450px;
+    opacity: 1;
+  }
+</style>
 <script type="text/javascript"><!--
 $('#slideshow{{ module }}').swiper({
 	mode: 'horizontal',
 	slidesPerView: 1,
-	pagination: '.slideshow{{ module }}',
-	paginationClickable: true,
-	nextButton: '.slideshow .swiper-button-next',
-    prevButton: '.slideshow .swiper-button-prev',
     spaceBetween: 30,
 	autoplay: 2500,
     autoplayDisableOnInteraction: true,
