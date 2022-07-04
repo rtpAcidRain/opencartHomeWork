@@ -1,4 +1,4 @@
-<h3>{{ heading_title }}</h3>
+{# <h3>{{ heading_title }}</h3>
 <div class="row"> {% for product in products %}
   <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
     <div class="product-thumb transition">
@@ -24,4 +24,55 @@
       </div>
     </div>
   </div>
-  {% endfor %} </div>
+  {% endfor %} </div> #}
+<section class="our_latest_product">
+		<div class="container">
+			<div class="s_m_title">
+				<h2>{{ heading_title }}</h2>
+			</div>
+      
+			<div class="l_product_slider owl-carousel">
+      {% for product in products %}
+				<div class="item">
+					<div class="l_product_item">
+						<div class="l_p_img">
+            <a href="{{ product.href }}">
+							<img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}">
+            </a>
+						</div>
+						<div class="l_p_text">
+							<ul>
+								<li class="p_icon">
+									<a href="" class="butbut" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');">
+										<i class="icon_piechart"></i>
+									</a>
+								</li>
+								<li>
+									<a  href="" class="add_cart_btn" onclick="cart.add('{{ product.product_id }}');" >{{ button_cart }}</a>
+								</li>
+								<li class="p_icon">
+									<a href="" class="butbut" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');">
+										<i class="icon_heart_alt"></i>
+									</a>
+								</li>
+							</ul>
+							<h4>{{ product.name }}</h4>
+               {% if product.price %}
+                  {% if not product.special %}
+							      <h5>
+								      {{ product.price }}
+							      </h5> 
+                    {% else %} 	
+                    <h5>
+							      	<del>{{ product.price }}</del>
+							    	{{ product.special }}</h5>
+                 {% endif %}
+                {% endif %}
+						</div>
+					</div>
+				</div>
+				
+       {% endfor %}
+			</div>
+		</div>
+	</section>
