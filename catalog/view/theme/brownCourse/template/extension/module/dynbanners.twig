@@ -1,0 +1,24 @@
+	<!--================Feature Big Add Area =================-->
+	<section class="feature_big_add_area">
+		<div class="container">
+			<div class="row">
+      {% for banner in banners %}
+				<div class="col-lg-6 mb-3">
+					<div class="f_add_item white_add">
+						<div class="f_add_img"><img class="img-fluid" src={{ banner.image }} alt=""></div>
+						<div class="f_add_hover">
+							<h4>{{ banner.title }}</h4>
+                {% if banner.link %}
+							<a class="add_btn" href="{{ banner.link }}">Shop Now
+								<i class="arrow_right"></i>
+							</a>
+                  {% endif %}
+						</div>
+					</div>
+				</div>
+         {% endfor %}
+			</div>
+      
+		</div>
+	</section>
+	<!--================End Feature Big Add Area =================-->
