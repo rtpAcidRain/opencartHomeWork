@@ -1,17 +1,42 @@
 {% if reviews %}
 {% for review in reviews %}
-<table class="table table-striped table-bordered">
-  <tr>
-    <td style="width: 50%;"><strong>{{ review.author }}</strong></td>
-    <td class="text-right">{{ review.date_added }}</td>
-  </tr>
-  <tr>
-    <td colspan="2"><p>{{ review.text }}</p>
-      {% for i in 1..5 %}
+
+                  <li class="comment">
+                    <div class="comment-body flex justify-content-between">
+                      <figure class="comment-author-avatar">
+                        <img src="{{ review.author }}" alt="user" />
+                      </figure>
+                      <!-- .comment-author-avatar -->
+
+                      <div class="comment-wrap">
+                        <div class="comment-author flex flex-wrap align-items-center">
+                          <span class="fn"> <a href="#">{{ review.author }}</a> </span
+                          ><!-- .fn -->
+
+                          <span class="comment-meta"> <a href="#">{{ review.date_added }}</a> </span
+                          ><!-- .comment-meta -->
+
+                          <div class="reply">
+                             {% for i in 1..5 %}
       {% if review.rating < i %} <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> {% endif %}
-      {% endfor %}</td>
-  </tr>
-</table>
+      {% endfor %}
+                          </div>
+                          <!-- .reply -->
+                        </div>
+                        <!-- .comment-author -->
+
+                        <p>
+                          {{ review.text }}
+                        </p>
+                      </div>
+                      <!-- .comment-wrap -->
+                    </div>
+                    <!-- .comment-body -->
+                  </li>
+
+
+
+
 {% endfor %}
 <div class="text-right">{{ pagination }}</div>
 {% else %}
